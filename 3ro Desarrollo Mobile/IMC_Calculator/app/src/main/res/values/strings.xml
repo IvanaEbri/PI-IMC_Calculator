@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">IMC_Calculator</string>
+    <string name="weight">Peso</string>
+    <string name="height">Altura</string>
+    <string name="your_imc">Tu IMC</string>
+    <string name="your_w">Tu peso es</string>
+    <string name="what_is">¿Qué es el IMC?</string>
+    <string name="definition">El Índice de Masa Corporal es la medición que valora el peso en relación a la altura condicionado al género biológico en los adultos. El IMC es un método utilizado para estimar la cantidad de grasa corporal que tiene una persona, y determinar si el peso está dentro del rango normal, o si se presenta sobrepeso o delgadez</string>
+    <string name="what_yn">¿Cómo te llamas?</string>
+    <string name="genre">Genero biológico</string>
+    <string name="name">Nombre</string>
+    <string name="female">Femenino</string>
+    <string name="male">Masculino</string>
+    <string name="calculate_IMC">Calcular IMC</string>
+    <string name="calculate">Calcular</string>
+    <string name="congrats">¡Felicidades!</string>
+    <string name="next_one">El próximo resultado será mejor</string>
+    <string name="continue_">¡Continua así!</string>
+    <string name="low_w2">Desnutricion</string>
+    <string name="low_w1">Bajo Peso</string>
+    <string name="normal">Normal</string>
+    <string name="over_w1">Ligero sobrepeso</string>
+    <string name="over_w2">Obesidad severa</string>
+    <string name="over_w3">Obesidad morbida</string>
+    <string name="imc">20,0</string>
+    <string name="kg">kg</string>
+    <string name="cm">cm</string>
+    <string name="hello">¡Hola,!</string>
+    <string name="i_pencil">Editar nombre</string>
+    <string name="i_arrow">Volver</string>
 </resources>
