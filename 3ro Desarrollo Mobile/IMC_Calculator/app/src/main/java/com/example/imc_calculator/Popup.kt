@@ -123,4 +123,24 @@ class Popup (private val context: Context) {
 
         dialog.show()
     }
+    fun showPopupEmpeoro( imc: Double, category: String){
+        val dialog = Dialog(context)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.popup_empeoro)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        val imcValue : TextView = dialog.findViewById(R.id.imc_value)
+        val categoryValue : TextView = dialog.findViewById(R.id.categoria_value)
+        val aceptButton : Button = dialog.findViewById(R.id.acept)
+
+        imcValue.text = imc.toString()
+        categoryValue.text = category
+
+        aceptButton.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
 }

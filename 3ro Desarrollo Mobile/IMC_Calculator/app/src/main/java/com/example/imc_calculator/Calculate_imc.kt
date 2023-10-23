@@ -67,13 +67,13 @@ class Calculate_imc: AppCompatActivity() {
                 comandoPopup.showPopupResNormal(imcN,categoriaN)
             } else if (imcN < 25.0){
                 if (imcN<imcAnt){
-                    //empeoro
+                    comandoPopup.showPopupEmpeoro(imcN,categoriaN)
                 }else{
                     //mejoro el paciente
                 }
             } else {
                 if (imcN>imcAnt){
-                    //empeoro
+                    comandoPopup.showPopupEmpeoro(imcN,categoriaN)
                 } else {
                     //mejoro
                 }
