@@ -62,13 +62,21 @@ class Calculate_imc: AppCompatActivity() {
             preferencesApp.setHeight(alturaN)
 
             if (pesoAnt==0.0){
-                //lanzo popup 1ra vez
+                comandoPopup.showPopupPrimerResultado(imcN, categoriaN)
             } else if (categoriaN == R.string.normal.toString()){
-                //lanzo pop up normal
+                comandoPopup.showPopupResNormal(imcN,categoriaN)
             } else if (imcN < 25.0){
-                //pesos por debajo
+                if (imcN<imcAnt){
+                    //empeoro
+                }else{
+                    //mejoro el paciente
+                }
             } else {
-                //pesos por arriba
+                if (imcN>imcAnt){
+                    //empeoro
+                } else {
+                    //mejoro
+                }
             }
 
             onBackPressedDispatcher.onBackPressed()

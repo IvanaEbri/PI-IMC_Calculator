@@ -2,7 +2,7 @@
     <string name="app_name">IMC_Calculator</string>
     <string name="weight">Peso</string>
     <string name="height">Altura</string>
-    <string name="your_imc">Tu IMC</string>
+    <string name="your_imc">Tu IMC es</string>
     <string name="your_w">Tu peso es</string>
     <string name="what_is">¿Qué es el IMC?</string>
     <string name="definition">El Índice de Masa Corporal es la medición que valora el peso en relación a la altura condicionado al género biológico en los adultos. El IMC es un método utilizado para estimar la cantidad de grasa corporal que tiene una persona, y determinar si el peso está dentro del rango normal, o si se presenta sobrepeso o delgadez</string>
