@@ -62,20 +62,31 @@ class Calculate_imc: AppCompatActivity() {
             preferencesApp.setHeight(alturaN)
 
             if (pesoAnt==0.0){
+                //primer resultado
                 comandoPopup.showPopupPrimerResultado(imcN, categoriaN)
             } else if (categoriaN == R.string.normal.toString()){
+                //categoria Normal
                 comandoPopup.showPopupResNormal(imcN,categoriaN)
+            } else if (imcN == imcAnt){
+                //reslutado igual al anterior
+                comandoPopup.showPopupEmpeoro(imcN,categoriaN)
             } else if (imcN < 25.0){
+                //resultados bajo peso
                 if (imcN<imcAnt){
+                    //bajo mas
                     comandoPopup.showPopupEmpeoro(imcN,categoriaN)
                 }else{
-                    //mejoro el paciente
+                    //mejoro
+                    comandoPopup.showPopupMejoro(imcN,imcAnt, categoriaN)
                 }
             } else {
+                //resultado sobre peso
                 if (imcN>imcAnt){
+                    //subio mas
                     comandoPopup.showPopupEmpeoro(imcN,categoriaN)
                 } else {
                     //mejoro
+                    comandoPopup.showPopupMejoro(imcN,imcAnt, categoriaN)
                 }
             }
 

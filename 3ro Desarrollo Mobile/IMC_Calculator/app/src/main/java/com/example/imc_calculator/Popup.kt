@@ -143,4 +143,35 @@ class Popup (private val context: Context) {
 
         dialog.show()
     }
+
+    fun showPopupMejoro( imcN: Double, imcV: Double, category: String){
+        val dialog = Dialog(context)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.popup_empeoro)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        val imcValue1 : TextView = dialog.findViewById(R.id.imc_value1)
+        val imcValue2 : TextView = dialog.findViewById(R.id.imc_value2)
+        val categoryValue : TextView = dialog.findViewById(R.id.categoria_value)
+        val aceptButton : Button = dialog.findViewById(R.id.acept)
+
+        categoryValue.text = category
+
+        if (imcN<imcV){
+            imcValue1.text = imcN.toString()
+            imcValue2.text = "< ${imcV.toString()}"
+            imcValue2.setTextColor(ContextCompat.getColor(context, R.color.gray))
+        } else {
+            imcValue1.text = "${imcV.toString()} >"
+            imcValue2.text = imcN.toString()
+            imcValue1.setTextColor(ContextCompat.getColor(context, R.color.gray))
+        }
+
+        aceptButton.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
 }
