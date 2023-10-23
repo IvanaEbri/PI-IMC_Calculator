@@ -95,10 +95,13 @@
                 android:id="@+id/peso_rs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:stepSize="0.5"
+                android:value="60"
                 android:valueFrom="40"
                 android:valueTo="150"
-                />
+                app:trackColor="@color/light_gray"
+                app:thumbColor="@color/light_green"
+                app:haloColor="@color/light_green"/>
+
             <com.google.android.material.divider.MaterialDivider
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -133,10 +136,11 @@
                 android:id="@+id/altura_rs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:stepSize="1"
                 android:valueFrom="120"
                 android:valueTo="200"
-                />
+                app:trackColor="@color/light_gray"
+                app:thumbColor="@color/light_green"
+                app:haloColor="@color/light_green"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
