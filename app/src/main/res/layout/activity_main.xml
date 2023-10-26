@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/barra_sup"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingVertical="40dp"
+       android:paddingHorizontal="30dp"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       >
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@drawable/element_corner_inf_rad">
+
+           <TextView
+               android:id="@+id/hello"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentStart="true"
+               android:layout_centerVertical="true"
+               android:layout_marginStart="30dp"
+               android:layout_marginTop="30dp"
+               android:layout_marginEnd="30dp"
+               android:layout_marginBottom="30dp"
+               tools:text="@string/hello"
+               android:textColor="@color/white"
+               android:textSize="35sp"
+               android:textStyle="bold" />
+           <ImageView
+               android:id="@+id/i_pencil"
+               android:layout_width="35sp"
+               android:layout_height="35sp"
+               android:src="@drawable/pencil"
+               android:contentDescription="@string/i_pencil"
+               android:layout_margin="20dp"
+               android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+               app:tint="@color/white" />
+       </RelativeLayout>
+
+   </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/cream"
+        android:background="@color/cream"
+        android:layout_margin="25dp"
+        app:layout_constraintTop_toBottomOf="@id/barra_sup"
+        app:layout_constraintStart_toStartOf="@id/barra_sup"
+        app:layout_constraintEnd_toEndOf="@id/barra_sup"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_imc"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/green"/>
+            <TextView
+                android:id="@+id/imc_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/imc"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight"
+                    android:textAllCaps="true"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_green"
+                    />
+
+                <TextView
+                    android:id="@+id/peso_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/gray"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:text="@string/kg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/height"
+                    android:textAllCaps="true"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_green"/>
+                <TextView
+                    android:id="@+id/altura_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    tools:text="@string/cm"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray"/>
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_w"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/categoria_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/normal"
+                android:textAllCaps="true"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginHorizontal="25dp"
+        android:id="@+id/btn_que_es"
+        android:backgroundTint="@color/light_gray"
+        app:layout_constraintBottom_toTopOf="@id/btn_calcular"
+        app:layout_constraintTop_toBottomOf="@id/card_cont"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/what_is"
+                android:textSize="25sp"
+                android:textColor="@color/green"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:id="@+id/btn_calcular"
+        android:backgroundTint="@color/green"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_que_es"
+        app:cardCornerRadius="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate_IMC"
+                android:textAllCaps="true"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
